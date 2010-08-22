@@ -69,13 +69,15 @@
 
 - (void)weaponChanged:(UISegmentedControl *)sender
 {
+	[gameView setFloodChosen:NO];
+	
     NSInteger idx = [sender selectedSegmentIndex];
     if (idx == 1) {  // fire
         RadialWeapon * rw = [[FireRadialWeapon alloc] initWithView:[self view]];
         [self setRadialWeapon:rw];
         [rw release], rw = nil;
 	} else if (idx == 2) { // flood
-		
+		[gameView setFloodChosen:YES];
     } else if (idx == 3) {  // lightning
         RadialWeapon * rw = [[LightningRadialWeapon alloc] initWithView:[self view]];
         [self setRadialWeapon:rw];
