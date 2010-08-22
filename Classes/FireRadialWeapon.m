@@ -5,22 +5,22 @@ static const NSTimeInterval ANIMATION_DURATION = 1.0;
 
 @interface FireRadialWeapon ()
 - (UIView *)explosionView;
-@property (nonatomic, assign) CGPoint location;
+@property (nonatomic, assign) CGRect explosionFrame;
 @end
 
 @implementation FireRadialWeapon
 
-@synthesize location;
+@synthesize explosionFrame;
 
 - (void)fireWeapon:(UIGestureRecognizer *)gestureRecognizer
 {
 	UIView * explosionView = [self explosionView];
 	CGRect frame = [explosionView frame];
 	CGPoint loc = [gestureRecognizer locationInView:[self view]];
-    [self setLocation:loc];
 	frame.origin.x = loc.x - frame.size.width / 2.0;
 	frame.origin.y = loc.y - frame.size.height / 2.0;
 	[explosionView setFrame:frame];
+    [self setExplosionFrame:frame];
 
 	[[self view] addSubview:explosionView];
 
@@ -29,6 +29,16 @@ static const NSTimeInterval ANIMATION_DURATION = 1.0;
 			   afterDelay:ANIMATION_DURATION];
 
     [[self delegate] radialWeaponDidFire:self];
+
+	/*
+	NSString * path = [[NSBundle mainBundle] pathForResource:@"noSound" ofType:@"wav"];
+	NSURL *soundFile = [[NSURL alloc] initFileURLWithPath:pathForSilentFile];
+	AVAudioPlayer *sPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:soundFile error:NULL];
+	[soundFile release];
+	[sPlayer prepareToPlay];
+	
+	[sPlayer play];
+	 */
 }
 
 - (void)removeView:(UIImageView *)view
@@ -57,8 +67,10 @@ static const NSTimeInterval ANIMATION_DURATION = 1.0;
 
 - (BOOL)isPersonInLineOfFire:(Person *)person
 {
-    //CGPoint pos = [person pos];
-    return YES;
+    CGPoint pos = [person pos];
+    CGRect frame = [self explosionFrame];
+    return (pos.x >= frame.origin.x && pos.x <= frame.origin.x + frame.size.width &&
+            pos.y >= frame.origin.y && pos.y <= frame.origin.y + frame.size.height);
 }
 
 @end
