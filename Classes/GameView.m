@@ -10,6 +10,7 @@
 
 
 @implementation GameView
+@synthesize floodChosen;
 
 - (CGFloat)CGPointDistance:(CGPoint)a to:(CGPoint)b
 {
@@ -67,6 +68,8 @@
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {
+	if (!floodChosen) return;
+	
 	currentElement = [[FloodElement alloc] init];
 	[elements addObject:currentElement];
 	
@@ -80,6 +83,8 @@
 
 - (void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event
 {
+	if (!floodChosen) return;
+	
 	UITouch *touch = [touches anyObject];
 	CGPoint point = [touch locationInView:self];
 	
@@ -92,6 +97,8 @@
 
 - (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
 {
+	if (!floodChosen) return;
+	
 	UITouch *touch = [touches anyObject];
 	CGPoint point = [touch locationInView:self];
 	
@@ -134,7 +141,7 @@
 		if (element.created) element.lifetime -= (1.0f / ((float)FRAMERATE));
 		
 		UIColor *color = [UIColor blueColor];
-		color = [color colorWithAlphaComponent:(element.created? 1.0f : 0.5f)];
+		color = [color colorWithAlphaComponent:(element.created? fmin(element.lifetime, 1.0f) : 0.5f)];
 		
 		CGContextSetStrokeColorWithColor(context, color.CGColor);
 		CGContextSetLineWidth(context, 30);
@@ -161,11 +168,11 @@
 					
 					CGFloat dist = [self CGPointDistance:point to:person.pos];
 					
-					if (dist <= 10)
+					if (dist <= 20)
 					{
 						[people removeObject:person];
 						ScoreManager *scores = [ScoreManager defaultManager];
-						scores.score += 5;
+						scores.score += KILL_VALUE;
 					}
 				}
 			}

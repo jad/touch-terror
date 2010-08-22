@@ -6,6 +6,9 @@
     #import <Foundation/Foundation.h>
     #import <UIKit/UIKit.h>
 
+	#define KILL_VALUE 5
 	#define PERSON_IMAGE_HEIGHT 14
 	#define FRAMERATE 30
+
+	#define kChoseFloodNotification @"ChoseFloodNotification"
 #endif
