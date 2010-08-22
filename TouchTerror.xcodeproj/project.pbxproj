@@ -18,6 +18,12 @@
 		2899E5220DE3E06400AC0155 /* TouchTerrorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2899E5210DE3E06400AC0155 /* TouchTerrorViewController.xib */; };
 		28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28AD733E0D9D9553002E5188 /* MainWindow.xib */; };
 		28D7ACF80DDB3853001CB0EB /* TouchTerrorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28D7ACF70DDB3853001CB0EB /* TouchTerrorViewController.m */; };
+		4752C1C21221CA93000B8248 /* app_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 4752C1BB1221CA93000B8248 /* app_icon.png */; };
+		4752C1C31221CA93000B8248 /* fire.png in Resources */ = {isa = PBXBuildFile; fileRef = 4752C1BC1221CA93000B8248 /* fire.png */; };
+		4752C1C41221CA93000B8248 /* flood.png in Resources */ = {isa = PBXBuildFile; fileRef = 4752C1BD1221CA93000B8248 /* flood.png */; };
+		4752C1C51221CA93000B8248 /* freeze.png in Resources */ = {isa = PBXBuildFile; fileRef = 4752C1BE1221CA93000B8248 /* freeze.png */; };
+		4752C1C61221CA93000B8248 /* lightning.png in Resources */ = {isa = PBXBuildFile; fileRef = 4752C1BF1221CA93000B8248 /* lightning.png */; };
+		4752C1C81221CA93000B8248 /* rock.png in Resources */ = {isa = PBXBuildFile; fileRef = 4752C1C11221CA93000B8248 /* rock.png */; };
 		A3C6FC581221B0A300BC164F /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = A3C6FC571221B0A300BC164F /* Person.m */; };
 		A3C6FC5B1221B10400BC164F /* GameView.m in Sources */ = {isa = PBXBuildFile; fileRef = A3C6FC5A1221B10400BC164F /* GameView.m */; };
 		A3C6FC631221B16C00BC164F /* snow.png in Resources */ = {isa = PBXBuildFile; fileRef = A3C6FC621221B16C00BC164F /* snow.png */; };
@@ -45,6 +51,12 @@
 		28D7ACF70DDB3853001CB0EB /* TouchTerrorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TouchTerrorViewController.m; sourceTree = "<group>"; };
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		32CA4F630368D1EE00C91783 /* TouchTerror_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TouchTerror_Prefix.pch; sourceTree = "<group>"; };
+		4752C1BB1221CA93000B8248 /* app_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = app_icon.png; sourceTree = "<group>"; };
+		4752C1BC1221CA93000B8248 /* fire.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fire.png; sourceTree = "<group>"; };
+		4752C1BD1221CA93000B8248 /* flood.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = flood.png; sourceTree = "<group>"; };
+		4752C1BE1221CA93000B8248 /* freeze.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = freeze.png; sourceTree = "<group>"; };
+		4752C1BF1221CA93000B8248 /* lightning.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lightning.png; sourceTree = "<group>"; };
+		4752C1C11221CA93000B8248 /* rock.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rock.png; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* TouchTerror-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "TouchTerror-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
 		A3C6FC561221B0A300BC164F /* Person.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
 		A3C6FC571221B0A300BC164F /* Person.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
@@ -132,6 +144,12 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				4752C1BB1221CA93000B8248 /* app_icon.png */,
+				4752C1BC1221CA93000B8248 /* fire.png */,
+				4752C1BD1221CA93000B8248 /* flood.png */,
+				4752C1BE1221CA93000B8248 /* freeze.png */,
+				4752C1BF1221CA93000B8248 /* lightning.png */,
+				4752C1C11221CA93000B8248 /* rock.png */,
 				A3C6FC621221B16C00BC164F /* snow.png */,
 				2899E5210DE3E06400AC0155 /* TouchTerrorViewController.xib */,
 				28AD733E0D9D9553002E5188 /* MainWindow.xib */,
@@ -201,6 +219,12 @@
 				28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */,
 				2899E5220DE3E06400AC0155 /* TouchTerrorViewController.xib in Resources */,
 				A3C6FC631221B16C00BC164F /* snow.png in Resources */,
+				4752C1C21221CA93000B8248 /* app_icon.png in Resources */,
+				4752C1C31221CA93000B8248 /* fire.png in Resources */,
+				4752C1C41221CA93000B8248 /* flood.png in Resources */,
+				4752C1C51221CA93000B8248 /* freeze.png in Resources */,
+				4752C1C61221CA93000B8248 /* lightning.png in Resources */,
+				4752C1C81221CA93000B8248 /* rock.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
