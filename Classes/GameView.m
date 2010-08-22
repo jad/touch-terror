@@ -19,6 +19,19 @@
     return self;
 }
 
+- (void)addPerson
+{
+	Person *person = [[Person alloc] init];
+	person.pos = CGPointMake(arc4random() % ((int)self.frame.size.width), arc4random() % ((int)self.frame.size.height));
+	
+	int varience = arc4random() % 1000;
+	float floatvarience = ((float)varience) * 0.01;
+	floatvarience -= 5.0f;
+	
+	person.speed = 15.0f + floatvarience;
+	[people addObject:person];
+}
+
 - (void)awakeFromNib
 {
 	displayTimer = [NSTimer scheduledTimerWithTimeInterval:1.0f/((float)FRAMERATE) target:self selector:@selector(update:) userInfo:nil repeats:YES];
@@ -27,17 +40,7 @@
 	
 	for (int i = 0; i < 20; i++)
 	{
-		Person *person = [[Person alloc] init];
-		person.pos = CGPointMake(arc4random() % 768, arc4random() % 1024);
-		
-		int varience = arc4random() % 2000;
-		float floatvarience = ((float)varience) * 0.01;
-		floatvarience -= 10.0f;
-		
-		NSLog(@"%f", floatvarience);
-		
-		person.speed = 30.0f + floatvarience;
-		[people addObject:person];
+		[self addPerson];
 	}
 }
 
