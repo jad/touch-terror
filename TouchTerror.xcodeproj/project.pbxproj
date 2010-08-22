@@ -44,6 +44,7 @@
 		A310714C1221D0CD00569C11 /* LightningRadialWeapon.m in Sources */ = {isa = PBXBuildFile; fileRef = A31071481221D0CD00569C11 /* LightningRadialWeapon.m */; };
 		A310714D1221D0CD00569C11 /* RadialWeapon.m in Sources */ = {isa = PBXBuildFile; fileRef = A310714A1221D0CD00569C11 /* RadialWeapon.m */; };
 		A31072041221DF3200569C11 /* thunder-03.wav in Resources */ = {isa = PBXBuildFile; fileRef = A31072031221DF3200569C11 /* thunder-03.wav */; };
+		A31072081221DFB300569C11 /* flood.wav in Resources */ = {isa = PBXBuildFile; fileRef = A31072071221DFB300569C11 /* flood.wav */; };
 		A37EF76A1221CB32003101CE /* person.png in Resources */ = {isa = PBXBuildFile; fileRef = A37EF7691221CB32003101CE /* person.png */; };
 		A3C6FC581221B0A300BC164F /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = A3C6FC571221B0A300BC164F /* Person.m */; };
 		A3C6FC5B1221B10400BC164F /* GameView.m in Sources */ = {isa = PBXBuildFile; fileRef = A3C6FC5A1221B10400BC164F /* GameView.m */; };
@@ -99,6 +100,7 @@
 		A31071491221D0CD00569C11 /* RadialWeapon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RadialWeapon.h; sourceTree = "<group>"; };
 		A310714A1221D0CD00569C11 /* RadialWeapon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RadialWeapon.m; sourceTree = "<group>"; };
 		A31072031221DF3200569C11 /* thunder-03.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "thunder-03.wav"; sourceTree = "<group>"; };
+		A31072071221DFB300569C11 /* flood.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = flood.wav; sourceTree = "<group>"; };
 		A37EF7691221CB32003101CE /* person.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = person.png; sourceTree = "<group>"; };
 		A3C6FC561221B0A300BC164F /* Person.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
 		A3C6FC571221B0A300BC164F /* Person.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
@@ -187,6 +189,7 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				A31072071221DFB300569C11 /* flood.wav */,
 				A31072031221DF3200569C11 /* thunder-03.wav */,
 				0572B5A11221DAA700E0DCDF /* explosion-01.wav */,
 				A31071231221D0BF00569C11 /* explosion00.jpg */,
@@ -309,6 +312,7 @@
 				A31071441221D0BF00569C11 /* explosion16.jpg in Resources */,
 				0572B5A21221DAA700E0DCDF /* explosion-01.wav in Resources */,
 				A31072041221DF3200569C11 /* thunder-03.wav in Resources */,
+				A31072081221DFB300569C11 /* flood.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

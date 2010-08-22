@@ -8,6 +8,8 @@
 
 #import "GameView.h"
 
+#import <AVFoundation/AVFoundation.h>
+
 
 @implementation GameView
 @synthesize floodChosen;
@@ -117,6 +119,13 @@
 	
 	currentElement.created = YES;
 	[currentElement release];
+	
+	NSString * path = [[NSBundle mainBundle] pathForResource:@"flood" ofType:@"wav"];
+	NSURL * soundFile = [[NSURL alloc] initFileURLWithPath:path];
+	AVAudioPlayer * player = [[AVAudioPlayer alloc] initWithContentsOfURL:soundFile error:NULL];
+	[soundFile release];
+	[player prepareToPlay];
+	[player play];	
 }
 
 - (void)killPerson:(Person *)person
