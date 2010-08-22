@@ -8,12 +8,15 @@
 
 #import "ScoreManager.h"
 #import "Person.h"
+#import "FloodElement.h"
 
 
 @interface GameView : UIView {
 	NSTimer *displayTimer;
 
 	NSMutableArray *people;
+	
+	FloodElement *currentElement;
 	NSMutableArray *elements;
 }
 

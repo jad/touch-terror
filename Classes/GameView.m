@@ -38,11 +38,20 @@
 	displayTimer = [[NSTimer scheduledTimerWithTimeInterval:1.0f/((float)FRAMERATE) target:self selector:@selector(update:) userInfo:nil repeats:YES] retain];
 	
 	if (!people) people = [[NSMutableArray alloc] init];
+	if (!elements) elements = [[NSMutableArray alloc] init];
 	
 	for (int i = 0; i < 50; i++)
 	{
 		[self addPerson];
 	}
+	
+	FloodElement *flood = [[FloodElement alloc] init];
+	[flood addPoint:CGPointMake(100, 0)];
+	[flood addPoint:CGPointMake(120, 100)];
+	[flood addPoint:CGPointMake(80, 200)];
+	[flood addPoint:CGPointMake(100, 400)];
+	
+	[elements addObject:flood];
 }
 
 - (void)checkBoundsOfPerson:(Person *)person
@@ -56,6 +65,35 @@
 		
 		[self addPerson];
 	}
+}
+
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
+{
+	currentElement = [[FloodElement alloc] init];
+	
+	UITouch *touch = [touches anyObject];
+	CGPoint point = [touch locationInView:self];
+	
+	[currentElement addPoint:point];
+}
+
+- (void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event
+{
+	UITouch *touch = [touches anyObject];
+	CGPoint point = [touch locationInView:self];
+	
+	[currentElement addPoint:point];
+}
+
+- (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
+{
+	UITouch *touch = [touches anyObject];
+	CGPoint point = [touch locationInView:self];
+	
+	[currentElement addPoint:point];
+	
+	[elements addObject:currentElement];
+	[currentElement release];
 }
 
 // Only override drawRect: if you perform custom drawing.
@@ -79,6 +117,30 @@
 		
 		[self checkBoundsOfPerson:person];
 	}
+	
+	// Draw elements
+	for (int i = 0; i < [elements count]; i++)
+	{
+		FloodElement *element = [elements objectAtIndex:i];
+		
+		UIColor *color = [UIColor blueColor];
+		
+		CGContextSetStrokeColorWithColor(context, color.CGColor);
+		CGContextSetLineWidth(context, 5);
+		CGContextBeginPath(context);
+		CGContextMoveToPoint(context, 0, 0);
+		
+		for (int v = 0; v < [element.path count]; v++)
+		{
+			NSValue *value = [element.path objectAtIndex:v];
+			
+			CGPoint point = [value CGPointValue];
+			
+			CGContextAddLineToPoint(context, point.x, point.y);
+		}
+		
+		CGContextStrokePath(context);
+	}
 }
 
 - (void)update:(NSTimer*)theTimer
@@ -88,6 +150,8 @@
 
 - (void)dealloc {
 	[displayTimer release];
+	[elements release];
+	[people release];
 	
     [super dealloc];
 }

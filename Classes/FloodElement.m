@@ -10,6 +10,7 @@
 
 
 @implementation FloodElement
+@synthesize path;
 
 - (id)init
 {
@@ -17,6 +18,8 @@
 	{
 		path = [[NSMutableArray alloc] init];
 	}
+	
+	return self;
 }
 
 - (void)addPoint:(CGPoint)point
