@@ -13,8 +13,8 @@ static const NSTimeInterval ANIMATION_DURATION = 1.0;
 	UIView * explosionView = [self explosionView];
 	CGRect frame = [explosionView frame];
 	CGPoint loc = [gestureRecognizer locationInView:[self view]];
-	frame.origin.x = loc.x;
-	frame.origin.y = loc.y;
+	frame.origin.x = loc.x - frame.size.width / 2.0;
+	frame.origin.y = loc.y - frame.size.height / 2.0;
 	[explosionView setFrame:frame];
 
 	[[self view] addSubview:explosionView];
