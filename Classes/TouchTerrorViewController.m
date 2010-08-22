@@ -74,12 +74,14 @@
     if (idx == 1) {  // fire
         RadialWeapon * rw = [[FireRadialWeapon alloc] initWithView:[self view]];
         [self setRadialWeapon:rw];
+        [rw setDelegate:gameView];
         [rw release], rw = nil;
 	} else if (idx == 2) { // flood
 		
     } else if (idx == 3) {  // lightning
         RadialWeapon * rw = [[LightningRadialWeapon alloc] initWithView:[self view]];
         [self setRadialWeapon:rw];
+        [rw setDelegate:gameView];
         [rw release], rw = nil;
     } else
 		[self setRadialWeapon:nil];
