@@ -1,19 +1,18 @@
-//
-//  TouchTerrorViewController.m
-//  TouchTerror
-//
-//  Created by Andy Riordan on 8/22/10.
-//  Copyright __MyCompanyName__ 2010. All rights reserved.
-//
-
 #import "TouchTerrorViewController.h"
 #import "ScoreManager.h"
+#import "RadialWeapon.h"
+#import "LightningRadialWeapon.h"
+#import "FireRadialWeapon.h"
 
 @interface TouchTerrorViewController ()
+@property (nonatomic, retain) RadialWeapon * radialWeapon;
+
 - (void)updateScore:(int)score;
 @end
 
 @implementation TouchTerrorViewController
+
+@synthesize radialWeapon = _radialWeapon;
 
 - (void)dealloc
 {
@@ -24,7 +23,12 @@
 {
     [super viewDidLoad];
 
-    NSArray * items = [NSArray arrayWithObjects:@"Rock", @"Fire", @"Flood", @"Lightning", @"Freeze", nil];
+    NSArray * items = [NSArray arrayWithObjects:
+                       [UIImage imageNamed:@"rock.png"], 
+                       [UIImage imageNamed:@"fire.png"], 
+                       [UIImage imageNamed:@"flood.png"],
+                       [UIImage imageNamed:@"lightning.png"],
+                       [UIImage imageNamed:@"freeze.png"], nil];
     UISegmentedControl * sc = [[UISegmentedControl alloc] initWithItems:items];
     [sc setSegmentedControlStyle:UISegmentedControlStyleBar];
     [sc setSelectedSegmentIndex:0];
@@ -65,6 +69,17 @@
 
 - (void)weaponChanged:(UISegmentedControl *)sender
 {
+    NSInteger idx = [sender selectedSegmentIndex];
+    if (idx == 1) {  // fire
+        RadialWeapon * rw = [[FireRadialWeapon alloc] initWithView:[self view]];
+        [self setRadialWeapon:rw];
+        [rw release], rw = nil;
+    } else if (idx == 3) {  // lightning
+        RadialWeapon * rw = [[LightningRadialWeapon alloc] initWithView:[self view]];
+        [self setRadialWeapon:rw];
+        [rw release], rw = nil;
+    } else
+		[self setRadialWeapon:nil];
 }
 
 #pragma mark -
