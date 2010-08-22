@@ -18,11 +18,13 @@
 #pragma mark -
 #pragma mark Application lifecycle
 
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {    
-    
-    // Override point for customization after app launch. 
-    [window addSubview:viewController.view];
+- (BOOL)application:(UIApplication *)application
+	didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
+{
+    UINavigationController * nav = [[UINavigationController alloc] initWithRootViewController:viewController];
+    [window addSubview:nav.view];
     [window makeKeyAndVisible];
+    [nav release], nav = nil;
 
 	return YES;
 }
