@@ -26,10 +26,11 @@
     return self;
 }
 
-- (void)addPerson
+- (void)addPersonTop:(BOOL)top
 {
 	Person *person = [[Person alloc] init];
-	person.pos = CGPointMake(arc4random() % ((int)self.frame.size.width), (arc4random() % ((int)self.frame.size.height) - self.frame.size.height));
+	person.pos = CGPointMake(arc4random() % ((int)self.frame.size.width), 
+							 top? -PERSON_IMAGE_HEIGHT : (arc4random() % ((int)self.frame.size.height) - self.frame.size.height));
 	
 	int varience = arc4random() % 1000;
 	float floatvarience = ((float)varience) * 0.01;
@@ -38,6 +39,11 @@
 	person.speed = 15.0f + floatvarience;
 	[people addObject:person];
 	[person release], person = nil;
+}
+
+- (void)addPerson
+{
+	[self addPersonTop:YES];
 }
 
 - (void)awakeFromNib
@@ -49,20 +55,25 @@
 	
 	for (int i = 0; i < 50; i++)
 	{
-		[self addPerson];
+		[self addPersonTop:NO];
 	}
 }
 
-- (void)checkBoundsOfPerson:(Person *)person
+- (void)checkBoundsOfPeople
 {
-	if (person.pos.y > self.frame.size.height + PERSON_IMAGE_HEIGHT)
+	for (int i = 0; i < [people count]; i++)
 	{
-		[people removeObject:person];
-		
-		ScoreManager *scores = [ScoreManager defaultManager];
-		scores.score -= 1;
-		
-		[self addPerson];
+		Person *person = [people objectAtIndex:i];
+		if (person.pos.y > self.frame.size.height + PERSON_IMAGE_HEIGHT)
+		{
+			[people removeObject:person];
+			i--;
+			
+			ScoreManager *scores = [ScoreManager defaultManager];
+			scores.score -= 1;
+			
+			[self addPersonTop:YES];
+		}
 	}
 }
 
@@ -108,11 +119,21 @@
 	[currentElement release];
 }
 
+- (void)killPerson:(Person *)person
+{
+	[people removeObject:person];
+	ScoreManager *scores = [ScoreManager defaultManager];
+	scores.score += KILL_VALUE;
+	//[self performSelector:@selector(addPerson:) withObject:nil afterDelay:1];
+}
+
 // Only override drawRect: if you perform custom drawing.
 // An empty implementation adversely affects performance during animation.
 - (void)drawRect:(CGRect)rect {
 	frame += 1;
 	frame %= 30;
+	
+	if (frame == 1 || [people count] < 50) [self addPersonTop:NO];
 	
 	CGContextRef context = UIGraphicsGetCurrentContext();
 	
@@ -130,7 +151,7 @@
 		CGRect personRect = CGRectMake(person.pos.x, person.pos.y, personImage.size.width, personImage.size.height);
 		CGContextDrawImage(context, personRect, image);
 		
-		[self checkBoundsOfPerson:person];
+		[self checkBoundsOfPeople];
 	}
 	
 	// Draw elements
@@ -160,7 +181,7 @@
 				CGContextAddLineToPoint(context, point.x, point.y);
 			}
 			
-			if (frame % 5 == 1)
+			if (element.created && frame % 5 == 1)
 			{
 				for (int p = 0; p < [people count]; p++)
 				{
@@ -170,9 +191,7 @@
 					
 					if (dist <= 20)
 					{
-						[people removeObject:person];
-						ScoreManager *scores = [ScoreManager defaultManager];
-						scores.score += KILL_VALUE;
+						[self killPerson:person];
 					}
 				}
 			}
@@ -197,10 +216,11 @@
 
 - (void)radialWeaponDidFire:(RadialWeapon *)weapon
 {
-    for (int i = 0, count = [people count]; i < count; ++i) {
+    for (int i = 0; i < [people count]; i++) {
         Person * person = [people objectAtIndex:i];
         if ([weapon isPersonInLineOfFire:person]) {
-            // TODO: KILL PERSON HERE
+            [self killPerson:person];
+			i--;
         }
     }
 }
