@@ -12,7 +12,7 @@
 @implementation ScoreManager
 @synthesize score;
 
-- (ScoreManager *)defaultManager
++ (ScoreManager *)defaultManager
 {
 	static ScoreManager *shared;
 	

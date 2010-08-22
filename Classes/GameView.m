@@ -44,6 +44,19 @@
 	}
 }
 
+- (void)checkBoundsOfPerson:(Person *)person
+{
+	if (person.pos.y > self.frame.size.height + PERSON_IMAGE_HEIGHT)
+	{
+		[people removeObject:person];
+		
+		ScoreManager *scores = [ScoreManager defaultManager];
+		scores.score -= 1;
+		
+		[self addPerson];
+	}
+}
+
 // Only override drawRect: if you perform custom drawing.
 // An empty implementation adversely affects performance during animation.
 - (void)drawRect:(CGRect)rect {
@@ -59,6 +72,8 @@
 		person.pos = personPoint;
 		CGRect personRect = CGRectMake(person.pos.x, person.pos.y, personImage.size.width, personImage.size.height);
 		CGContextDrawImage(context, personRect, image);
+		
+		[self checkBoundsOfPerson:person];
 	}
 }
 
