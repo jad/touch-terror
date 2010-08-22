@@ -28,19 +28,27 @@
     UIBarButtonItem * weaponsItem = [[UIBarButtonItem alloc] initWithCustomView:sc];
     [[self navigationItem] setLeftBarButtonItem:weaponsItem];
     [weaponsItem release], weaponsItem = nil;
+    [sc release], sc = nil;
+
+    UIBarButtonItem * scoreItem = [[UIBarButtonItem alloc] initWithTitle:@"Score: 0"
+                                                                   style:UIBarButtonItemStylePlain
+                                                                  target:self
+                                                                  action:@selector(scoreTouched)];
+    [scoreItem setEnabled:NO];
+    [[self navigationItem] setRightBarButtonItem:scoreItem];
+    [scoreItem release], scoreItem = nil;
+
+    //[[self navigationItem] setTitle:@"Touch Terror"];
 }
 
-
-// Override to allow orientations other than the default portrait orientation.
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
-    return YES;
+- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
+{
+    return NO;
 }
 
-- (void)didReceiveMemoryWarning {
-	// Releases the view if it doesn't have a superview.
+- (void)didReceiveMemoryWarning
+{
     [super didReceiveMemoryWarning];
-	
-	// Release any cached data, images, etc that aren't in use.
 }
 
 #pragma mark -
