@@ -53,16 +53,19 @@
 	}
 }
 
-- (void)checkBoundsOfPerson:(Person *)person
+- (void)checkBoundsOfPeople
 {
-	if (person.pos.y > self.frame.size.height + PERSON_IMAGE_HEIGHT)
+	for (Person *person in people)
 	{
-		[people removeObject:person];
-		
-		ScoreManager *scores = [ScoreManager defaultManager];
-		scores.score -= 1;
-		
-		[self addPerson];
+		if (person.pos.y > self.frame.size.height + PERSON_IMAGE_HEIGHT)
+		{
+			[people removeObject:person];
+			
+			ScoreManager *scores = [ScoreManager defaultManager];
+			scores.score -= 1;
+			
+			[self addPerson];
+		}
 	}
 }
 
@@ -130,7 +133,7 @@
 		CGRect personRect = CGRectMake(person.pos.x, person.pos.y, personImage.size.width, personImage.size.height);
 		CGContextDrawImage(context, personRect, image);
 		
-		[self checkBoundsOfPerson:person];
+		[self checkBoundsOfPeople];
 	}
 	
 	// Draw elements
@@ -160,7 +163,7 @@
 				CGContextAddLineToPoint(context, point.x, point.y);
 			}
 			
-			if (frame % 5 == 1)
+			if (element.created && frame % 5 == 1)
 			{
 				for (int p = 0; p < [people count]; p++)
 				{

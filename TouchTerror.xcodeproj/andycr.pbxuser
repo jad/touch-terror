@@ -13,17 +13,24 @@
 			A3C6FC451221B06B00BC164F /* TouchTerror */,
 		);
 	};
+	28D7ACF60DDB3853001CB0EB /* TouchTerrorViewController.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1568, 910}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 141}";
+		};
+	};
 	28D7ACF70DDB3853001CB0EB /* TouchTerrorViewController.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1568, 1540}}";
-			sepNavSelRange = "{2321, 0}";
-			sepNavVisRange = "{1503, 1877}";
+			sepNavIntBoundsRect = "{{0, 0}, {1568, 1554}}";
+			sepNavSelRange = "{3406, 0}";
+			sepNavVisRange = "{1340, 2058}";
 		};
 	};
 	29B97313FDCFA39411CA2CEA /* Project object */ = {
 		activeBuildConfigurationName = Debug;
 		activeExecutable = A3C6FC451221B06B00BC164F /* TouchTerror */;
-		activeSDKPreference = iphoneos3.2;
+		activeSDKPreference = iphonesimulator3.2;
 		activeTarget = 1D6058900D05DD3D006BFB54 /* TouchTerror */;
 		addToTargets = (
 			1D6058900D05DD3D006BFB54 /* TouchTerror */,
@@ -85,6 +92,11 @@
 			A31071851221D5E100569C11 /* PBXTextBookmark */ = A31071851221D5E100569C11 /* PBXTextBookmark */;
 			A31071861221D5E100569C11 /* PBXTextBookmark */ = A31071861221D5E100569C11 /* PBXTextBookmark */;
 			A31071871221D5E100569C11 /* PBXTextBookmark */ = A31071871221D5E100569C11 /* PBXTextBookmark */;
+			A310718E1221D69700569C11 /* PBXTextBookmark */ = A310718E1221D69700569C11 /* PBXTextBookmark */;
+			A310718F1221D69700569C11 /* PBXTextBookmark */ = A310718F1221D69700569C11 /* PBXTextBookmark */;
+			A31071901221D69700569C11 /* PBXTextBookmark */ = A31071901221D69700569C11 /* PBXTextBookmark */;
+			A31071911221D69700569C11 /* PBXTextBookmark */ = A31071911221D69700569C11 /* PBXTextBookmark */;
+			A31071971221D6DC00569C11 /* PBXTextBookmark */ = A31071971221D6DC00569C11 /* PBXTextBookmark */;
 			A37EF71F1221C832003101CE = A37EF71F1221C832003101CE /* PBXTextBookmark */;
 			A37EF7321221C8F6003101CE = A37EF7321221C8F6003101CE /* PBXTextBookmark */;
 			A37EF7391221C928003101CE = A37EF7391221C928003101CE /* PBXTextBookmark */;
@@ -179,7 +191,7 @@
 		fRef = A3C6FC5A1221B10400BC164F /* GameView.m */;
 		name = "GameView.m: 82";
 		rLen = 0;
-		rLoc = 2066;
+		rLoc = 2096;
 		rType = 0;
 		vrLen = 1743;
 		vrLoc = 1236;
@@ -189,7 +201,7 @@
 		fRef = A3C6FC5A1221B10400BC164F /* GameView.m */;
 		name = "GameView.m: 61";
 		rLen = 0;
-		rLoc = 1446;
+		rLoc = 1469;
 		rType = 0;
 		vrLen = 1551;
 		vrLoc = 1236;
@@ -231,7 +243,7 @@
 		fRef = A3C6FC5A1221B10400BC164F /* GameView.m */;
 		name = "GameView.m: 123";
 		rLen = 0;
-		rLoc = 3084;
+		rLoc = 3114;
 		rType = 0;
 		vrLen = 1894;
 		vrLoc = 2082;
@@ -241,7 +253,7 @@
 		fRef = A3C6FC5A1221B10400BC164F /* GameView.m */;
 		name = "GameView.m: 137";
 		rLen = 0;
-		rLoc = 3588;
+		rLoc = 3611;
 		rType = 0;
 		vrLen = 1580;
 		vrLoc = 2919;
@@ -301,7 +313,7 @@
 		fRef = A3C6FC5A1221B10400BC164F /* GameView.m */;
 		name = "GameView.m: 171";
 		rLen = 0;
-		rLoc = 4260;
+		rLoc = 4302;
 		rType = 0;
 		vrLen = 1667;
 		vrLoc = 2950;
@@ -311,7 +323,7 @@
 		fRef = A3C6FC5A1221B10400BC164F /* GameView.m */;
 		name = "GameView.m: 148";
 		rLen = 0;
-		rLoc = 3731;
+		rLoc = 3754;
 		rType = 0;
 		vrLen = 1667;
 		vrLoc = 2950;
@@ -335,6 +347,56 @@
 		rType = 0;
 		vrLen = 1877;
 		vrLoc = 1503;
+	};
+	A310718E1221D69700569C11 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28D7ACF60DDB3853001CB0EB /* TouchTerrorViewController.h */;
+		name = "TouchTerrorViewController.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 141;
+		vrLoc = 0;
+	};
+	A310718F1221D69700569C11 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28D7ACF70DDB3853001CB0EB /* TouchTerrorViewController.m */;
+		name = "TouchTerrorViewController.m: 111";
+		rLen = 0;
+		rLoc = 3406;
+		rType = 0;
+		vrLen = 2058;
+		vrLoc = 1340;
+	};
+	A31071901221D69700569C11 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = A3C6FC5A1221B10400BC164F /* GameView.m */;
+		name = "GameView.m: 148";
+		rLen = 0;
+		rLoc = 3754;
+		rType = 0;
+		vrLen = 1625;
+		vrLoc = 2952;
+	};
+	A31071911221D69700569C11 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = A3C6FC5A1221B10400BC164F /* GameView.m */;
+		name = "GameView.m: 60";
+		rLen = 0;
+		rLoc = 1376;
+		rType = 0;
+		vrLen = 1449;
+		vrLoc = 934;
+	};
+	A31071971221D6DC00569C11 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = A3C6FC5A1221B10400BC164F /* GameView.m */;
+		name = "GameView.m: 166";
+		rLen = 0;
+		rLoc = 4079;
+		rType = 0;
+		vrLen = 1645;
+		vrLoc = 3018;
 	};
 	A37EF71F1221C832003101CE /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
@@ -412,7 +474,7 @@
 		fRef = A3C6FC5A1221B10400BC164F /* GameView.m */;
 		name = "GameView.m: 132";
 		rLen = 0;
-		rLoc = 3691;
+		rLoc = 3714;
 		rType = 0;
 		vrLen = 1487;
 		vrLoc = 2467;
@@ -503,9 +565,9 @@
 	};
 	A3C6FC5A1221B10400BC164F /* GameView.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1568, 2786}}";
-			sepNavSelRange = "{3731, 0}";
-			sepNavVisRange = "{2950, 1667}";
+			sepNavIntBoundsRect = "{{0, 0}, {1568, 2772}}";
+			sepNavSelRange = "{4079, 0}";
+			sepNavVisRange = "{3018, 1645}";
 		};
 	};
 	A3C6FC821221B33600BC164F /* PBXTextBookmark */ = {
