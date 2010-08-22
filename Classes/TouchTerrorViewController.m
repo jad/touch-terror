@@ -23,7 +23,12 @@
 {
     [super viewDidLoad];
 
-    NSArray * items = [NSArray arrayWithObjects:@"Rock", @"Fire", @"Flood", @"Lightning", @"Freeze", nil];
+    NSArray * items = [NSArray arrayWithObjects:
+                       [UIImage imageNamed:@"rock.png"], 
+                       [UIImage imageNamed:@"fire.png"], 
+                       [UIImage imageNamed:@"flood.png"],
+                       [UIImage imageNamed:@"lightning.png"],
+                       [UIImage imageNamed:@"freeze.png"], nil];
     UISegmentedControl * sc = [[UISegmentedControl alloc] initWithItems:items];
     [sc setSegmentedControlStyle:UISegmentedControlStyleBar];
     [sc setSelectedSegmentIndex:0];
