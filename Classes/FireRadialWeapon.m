@@ -58,7 +58,7 @@ static const NSTimeInterval ANIMATION_DURATION = 1.0;
 - (BOOL)isPersonInLineOfFire:(Person *)person
 {
     //CGPoint pos = [person pos];
-    return NO;
+    return YES;
 }
 
 @end
