@@ -10,6 +10,8 @@
 
 
 @interface GameView : UIView {
+	NSTimer *displayTimer;
+
 	NSMutableArray *people;
 }
 

@@ -21,12 +21,15 @@
 
 - (void)awakeFromNib
 {
+	displayTimer = [NSTimer scheduledTimerWithTimeInterval:1.0f/30.0f target:self selector:@selector(update:) userInfo:nil repeats:YES];
+	
 	if (!people) people = [[NSMutableArray alloc] init];
 	
 	for (int i = 0; i < 20; i++)
 	{
 		Person *person = [[Person alloc] init];
 		person.pos = CGPointMake(arc4random() % 768, arc4random() % 1024);
+		person.speed = 30.0f;
 		[people addObject:person];
 	}
 }
@@ -41,9 +44,17 @@
 	
 	for (Person *person in people)
 	{
-		CGRect personRect = CGRectMake(person.pos.x, person.pos.y, 20, 20);
+		CGPoint personPoint = person.pos;
+		personPoint.y += person.speed / FRAMERATE;
+		person.pos = personPoint;
+		CGRect personRect = CGRectMake(person.pos.x, person.pos.y, personImage.size.width, personImage.size.height);
 		CGContextDrawImage(context, personRect, image);
 	}
+}
+
+- (void)update:(NSTimer*)theTimer
+{
+	[self setNeedsDisplayInRect:self.frame];
 }
 
 - (void)dealloc {
