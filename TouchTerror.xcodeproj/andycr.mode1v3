@@ -227,8 +227,6 @@
 			<key>Layout</key>
 			<array>
 				<dict>
-					<key>BecomeActive</key>
-					<true/>
 					<key>ContentConfiguration</key>
 					<dict>
 						<key>PBXBottomSmartGroupGIDs</key>
@@ -272,6 +270,7 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
+									<integer>15</integer>
 									<integer>1</integer>
 									<integer>0</integer>
 								</array>
@@ -307,6 +306,8 @@
 					<key>Dock</key>
 					<array>
 						<dict>
+							<key>BecomeActive</key>
+							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
@@ -321,6 +322,10 @@
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
 										<string>GameView.m</string>
+										<key>_historyCapacity</key>
+										<integer>0</integer>
+										<key>bookmark</key>
+										<string>A31071831221D59100569C11</string>
 										<key>history</key>
 										<array>
 											<string>A3C6FC821221B33600BC164F</string>
@@ -329,12 +334,20 @@
 											<string>A3EB60B51221BBBA0066EEDE</string>
 											<string>A3EB60FA1221C0030066EEDE</string>
 											<string>A3EB612C1221C5150066EEDE</string>
-											<string>A37EF7321221C8F6003101CE</string>
 											<string>A37EF7391221C928003101CE</string>
 											<string>A37EF7641221CAEF003101CE</string>
 											<string>A37EF7651221CAEF003101CE</string>
 											<string>A37EF78F1221CC9E003101CE</string>
-											<string>A31070FE1221CFC700569C11</string>
+											<string>A31071681221D35300569C11</string>
+											<string>A31071691221D35300569C11</string>
+											<string>A31071731221D42000569C11</string>
+											<string>A31071741221D42000569C11</string>
+											<string>A31071751221D42000569C11</string>
+											<string>A310717E1221D59100569C11</string>
+											<string>A310717F1221D59100569C11</string>
+											<string>A31071801221D59100569C11</string>
+											<string>A31071811221D59100569C11</string>
+											<string>A31071821221D59100569C11</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -532,7 +545,8 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>A310715C1221D0D200569C11</string>
+		<string>A31071841221D59100569C11</string>
+		<string>A310716F1221D35300569C11</string>
 		<string>A310715D1221D0D200569C11</string>
 		<string>1C78EAAD065D492600B07095</string>
 		<string>A3C6FC521221B07100BC164F</string>

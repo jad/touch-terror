@@ -18,8 +18,14 @@
 	
 	int frame;
 	
+	CGPoint lastTouch;
+	
+	BOOL floodChosen;
+	
 	FloodElement *currentElement;
 	NSMutableArray *elements;
 }
+
+@property BOOL floodChosen;
 
 @end
