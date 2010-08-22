@@ -7,7 +7,7 @@
 		);
 	};
 	29B97313FDCFA39411CA2CEA /* Project object */ = {
-		activeBuildConfigurationName = Debug;
+		activeBuildConfigurationName = Release;
 		activeExecutable = A3C6FC451221B06B00BC164F /* TouchTerror */;
 		activeTarget = 1D6058900D05DD3D006BFB54 /* TouchTerror */;
 		addToTargets = (
@@ -63,6 +63,13 @@
 			A3EB60431221B5FE0066EEDE = A3EB60431221B5FE0066EEDE /* PBXTextBookmark */;
 			A3EB60461221B6170066EEDE = A3EB60461221B6170066EEDE /* PBXTextBookmark */;
 			A3EB60491221B6210066EEDE = A3EB60491221B6210066EEDE /* PBXTextBookmark */;
+			A3EB607E1221B9970066EEDE /* PBXTextBookmark */ = A3EB607E1221B9970066EEDE /* PBXTextBookmark */;
+			A3EB607F1221B9970066EEDE /* PBXTextBookmark */ = A3EB607F1221B9970066EEDE /* PBXTextBookmark */;
+			A3EB60801221B9970066EEDE /* PBXTextBookmark */ = A3EB60801221B9970066EEDE /* PBXTextBookmark */;
+			A3EB60811221B9970066EEDE /* PBXTextBookmark */ = A3EB60811221B9970066EEDE /* PBXTextBookmark */;
+			A3EB60821221B9970066EEDE /* PBXTextBookmark */ = A3EB60821221B9970066EEDE /* PBXTextBookmark */;
+			A3EB60841221B9970066EEDE /* PBXTextBookmark */ = A3EB60841221B9970066EEDE /* PBXTextBookmark */;
+			A3EB60851221B9970066EEDE /* PBXTextBookmark */ = A3EB60851221B9970066EEDE /* PBXTextBookmark */;
 		};
 		sourceControlManager = A3C6FC541221B07200BC164F /* Source Control */;
 		userBuildSettings = {
@@ -70,7 +77,7 @@
 	};
 	32CA4F630368D1EE00C91783 /* TouchTerror_Prefix.pch */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1568, 941}}";
+			sepNavIntBoundsRect = "{{0, 0}, {1568, 940}}";
 			sepNavSelRange = "{186, 0}";
 			sepNavVisRange = "{0, 214}";
 		};
@@ -140,9 +147,9 @@
 	};
 	A3C6FC5A1221B10400BC164F /* GameView.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1568, 940}}";
-			sepNavSelRange = "{745, 0}";
-			sepNavVisRange = "{0, 1512}";
+			sepNavIntBoundsRect = "{{0, 0}, {1568, 1022}}";
+			sepNavSelRange = "{544, 0}";
+			sepNavVisRange = "{0, 1651}";
 		};
 	};
 	A3C6FC821221B33600BC164F /* PBXTextBookmark */ = {
@@ -190,7 +197,7 @@
 		fRef = A3C6FC5A1221B10400BC164F /* GameView.m */;
 		name = "GameView.m: 44";
 		rLen = 0;
-		rLoc = 1249;
+		rLoc = 1481;
 		rType = 0;
 		vrLen = 847;
 		vrLoc = 274;
@@ -200,7 +207,7 @@
 		fRef = A3C6FC5A1221B10400BC164F /* GameView.m */;
 		name = "GameView.m: 40";
 		rLen = 0;
-		rLoc = 1069;
+		rLoc = 1301;
 		rType = 0;
 		vrLen = 1121;
 		vrLoc = 0;
@@ -210,7 +217,7 @@
 		fRef = A3C6FC5A1221B10400BC164F /* GameView.m */;
 		name = "GameView.m: 44";
 		rLen = 0;
-		rLoc = 1324;
+		rLoc = 1556;
 		rType = 0;
 		vrLen = 1120;
 		vrLoc = 0;
@@ -220,7 +227,7 @@
 		fRef = A3C6FC5A1221B10400BC164F /* GameView.m */;
 		name = "GameView.m: 44";
 		rLen = 0;
-		rLoc = 1249;
+		rLoc = 1481;
 		rType = 0;
 		vrLen = 1141;
 		vrLoc = 0;
@@ -230,7 +237,7 @@
 		fRef = A3C6FC5A1221B10400BC164F /* GameView.m */;
 		name = "GameView.m: 44";
 		rLen = 0;
-		rLoc = 1324;
+		rLoc = 1556;
 		rType = 0;
 		vrLen = 1163;
 		vrLoc = 0;
@@ -260,7 +267,7 @@
 		fRef = A3C6FC5A1221B10400BC164F /* GameView.m */;
 		name = "GameView.m: 45";
 		rLen = 0;
-		rLoc = 1186;
+		rLoc = 1418;
 		rType = 0;
 		vrLen = 1244;
 		vrLoc = 0;
@@ -270,7 +277,7 @@
 		fRef = A3C6FC5A1221B10400BC164F /* GameView.m */;
 		name = "GameView.m: 46";
 		rLen = 0;
-		rLoc = 1215;
+		rLoc = 1447;
 		rType = 0;
 		vrLen = 1271;
 		vrLoc = 0;
@@ -280,7 +287,7 @@
 		fRef = A3C6FC5A1221B10400BC164F /* GameView.m */;
 		name = "GameView.m: 24";
 		rLen = 0;
-		rLoc = 487;
+		rLoc = 863;
 		rType = 0;
 		vrLen = 1492;
 		vrLoc = 0;
@@ -320,7 +327,7 @@
 		fRef = A3C6FC5A1221B10400BC164F /* GameView.m */;
 		name = "GameView.m: 32";
 		rLen = 0;
-		rLoc = 712;
+		rLoc = 957;
 		rType = 0;
 		vrLen = 1511;
 		vrLoc = 0;
@@ -330,9 +337,99 @@
 		fRef = A3C6FC5A1221B10400BC164F /* GameView.m */;
 		name = "GameView.m: 32";
 		rLen = 0;
-		rLoc = 709;
+		rLoc = 957;
 		rType = 0;
 		vrLen = 1512;
+		vrLoc = 0;
+	};
+	A3EB605D1221B6A20066EEDE /* ScoreManager.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1568, 940}}";
+			sepNavSelRange = "{253, 0}";
+			sepNavVisRange = "{0, 294}";
+		};
+	};
+	A3EB605E1221B6A20066EEDE /* ScoreManager.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1568, 940}}";
+			sepNavSelRange = "{218, 0}";
+			sepNavVisRange = "{0, 379}";
+		};
+	};
+	A3EB607E1221B9970066EEDE /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = A3C6FC591221B10400BC164F /* GameView.h */;
+		name = "GameView.h: 14";
+		rLen = 0;
+		rLoc = 216;
+		rType = 0;
+		vrLen = 250;
+		vrLoc = 0;
+	};
+	A3EB607F1221B9970066EEDE /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 32CA4F630368D1EE00C91783 /* TouchTerror_Prefix.pch */;
+		name = "TouchTerror_Prefix.pch: 9";
+		rLen = 0;
+		rLoc = 186;
+		rType = 0;
+		vrLen = 214;
+		vrLoc = 0;
+	};
+	A3EB60801221B9970066EEDE /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = A3EB605D1221B6A20066EEDE /* ScoreManager.h */;
+		name = "ScoreManager.h: 17";
+		rLen = 0;
+		rLoc = 253;
+		rType = 0;
+		vrLen = 294;
+		vrLoc = 0;
+	};
+	A3EB60811221B9970066EEDE /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = A3EB605E1221B6A20066EEDE /* ScoreManager.m */;
+		name = "ScoreManager.m: 13";
+		rLen = 0;
+		rLoc = 218;
+		rType = 0;
+		vrLen = 379;
+		vrLoc = 0;
+	};
+	A3EB60821221B9970066EEDE /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = A3EB60831221B9970066EEDE /* stdlib.h */;
+		name = "stdlib.h: 175";
+		rLen = 17;
+		rLoc = 5778;
+		rType = 0;
+		vrLen = 2344;
+		vrLoc = 4601;
+	};
+	A3EB60831221B9970066EEDE /* stdlib.h */ = {
+		isa = PBXFileReference;
+		name = stdlib.h;
+		path = /DeveloperBeta/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.2.sdk/usr/include/stdlib.h;
+		sourceTree = "<absolute>";
+	};
+	A3EB60841221B9970066EEDE /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = A3C6FC5A1221B10400BC164F /* GameView.m */;
+		name = "GameView.m: 36";
+		rLen = 0;
+		rLoc = 957;
+		rType = 0;
+		vrLen = 1580;
+		vrLoc = 0;
+	};
+	A3EB60851221B9970066EEDE /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = A3C6FC5A1221B10400BC164F /* GameView.m */;
+		name = "GameView.m: 27";
+		rLen = 0;
+		rLoc = 544;
+		rType = 0;
+		vrLen = 1651;
 		vrLoc = 0;
 	};
 }
