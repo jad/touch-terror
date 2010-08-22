@@ -18,8 +18,8 @@
 	return distance;
 }
 
-- (id)initWithFrame:(CGRect)frame {
-    if ((self = [super initWithFrame:frame])) {
+- (id)initWithFrame:(CGRect)aFrame {
+    if ((self = [super initWithFrame:aFrame])) {
         // Initialization code
     }
     return self;

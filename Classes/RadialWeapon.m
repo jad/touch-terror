@@ -7,11 +7,13 @@
 
 @implementation RadialWeapon
 
+@synthesize delegate = _delegate;
 @synthesize view = _view;
 @synthesize gestureRecognizer = _gestureRecognizer;
 
 - (void)dealloc
 {
+    _delegate = nil;
     [_view removeGestureRecognizer:_gestureRecognizer];
     [_view release], _view = nil;
     [_gestureRecognizer release], _gestureRecognizer = nil;
@@ -33,6 +35,12 @@
 - (void)fireWeapon:(UIGestureRecognizer *)gestureRecognizer
 {
     NSAssert(NO, @"Must be implemented by subclasses");
+}
+
+- (BOOL)isPersonInLineOfFire:(Person *)person
+{
+    NSAssert(NO, @"Must be implemented by subclasses");
+    return NO;
 }
 
 @end
