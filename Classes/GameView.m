@@ -195,6 +195,19 @@
 	[self setNeedsDisplayInRect:self.frame];
 }
 
+#pragma mark -
+#pragma mark RadialWeaponDelegate implementation
+
+- (void)radialWeaponDidFire:(RadialWeapon *)weapon
+{
+    for (int i = 0, count = [people count]; i < count; ++i) {
+        Person * person = [people objectAtIndex:i];
+        if ([weapon isPersonInLineOfFire:person]) {
+            // TODO: KILL PERSON HERE
+        }
+    }
+}
+
 - (void)dealloc {
 	[displayTimer release];
 	[elements release];
