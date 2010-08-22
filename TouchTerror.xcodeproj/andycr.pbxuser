@@ -43,11 +43,11 @@
 					PBXFileDataSource_Target_ColumnID,
 				);
 			};
-			PBXPerProjectTemplateStateSaveDate = 304203107;
-			PBXWorkspaceStateSaveDate = 304203107;
+			PBXPerProjectTemplateStateSaveDate = 304203221;
+			PBXWorkspaceStateSaveDate = 304203221;
 		};
 		perUserProjectItems = {
-			A37EF6F21221C567003101CE /* PBXTextBookmark */ = A37EF6F21221C567003101CE /* PBXTextBookmark */;
+			A37EF6F21221C567003101CE = A37EF6F21221C567003101CE /* PBXTextBookmark */;
 			A3C6FC821221B33600BC164F = A3C6FC821221B33600BC164F /* PBXTextBookmark */;
 			A3C6FC831221B33600BC164F = A3C6FC831221B33600BC164F /* PBXTextBookmark */;
 			A3EB60821221B9970066EEDE = A3EB60821221B9970066EEDE /* PBXTextBookmark */;
@@ -146,7 +146,7 @@
 	};
 	A3C6FC591221B10400BC164F /* GameView.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1568, 938}}";
+			sepNavIntBoundsRect = "{{0, 0}, {1568, 913}}";
 			sepNavSelRange = "{307, 0}";
 			sepNavVisRange = "{0, 360}";
 		};
@@ -187,7 +187,7 @@
 	};
 	A3EB605E1221B6A20066EEDE /* ScoreManager.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1568, 938}}";
+			sepNavIntBoundsRect = "{{0, 0}, {1568, 913}}";
 			sepNavSelRange = "{221, 0}";
 			sepNavVisRange = "{0, 379}";
 		};

@@ -44,14 +44,6 @@
 	{
 		[self addPerson];
 	}
-	
-	FloodElement *flood = [[FloodElement alloc] init];
-	[flood addPoint:CGPointMake(100, 0)];
-	[flood addPoint:CGPointMake(120, 100)];
-	[flood addPoint:CGPointMake(80, 200)];
-	[flood addPoint:CGPointMake(100, 400)];
-	
-	[elements addObject:flood];
 }
 
 - (void)checkBoundsOfPerson:(Person *)person
@@ -70,11 +62,12 @@
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {
 	currentElement = [[FloodElement alloc] init];
+	[elements addObject:currentElement];
 	
 	UITouch *touch = [touches anyObject];
 	CGPoint point = [touch locationInView:self];
 	
-	[currentElement addPoint:point];
+	[currentElement addPoint:CGPointMake(point.x, 0)];
 }
 
 - (void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event
@@ -90,9 +83,8 @@
 	UITouch *touch = [touches anyObject];
 	CGPoint point = [touch locationInView:self];
 	
-	[currentElement addPoint:point];
+	[currentElement addPoint:CGPointMake(point.x, self.frame.size.height)];
 	
-	[elements addObject:currentElement];
 	[currentElement release];
 }
 
@@ -124,11 +116,11 @@
 		FloodElement *element = [elements objectAtIndex:i];
 		
 		UIColor *color = [UIColor blueColor];
+		color = [color colorWithAlphaComponent:0.5f];
 		
 		CGContextSetStrokeColorWithColor(context, color.CGColor);
-		CGContextSetLineWidth(context, 5);
+		CGContextSetLineWidth(context, 30);
 		CGContextBeginPath(context);
-		CGContextMoveToPoint(context, 0, 0);
 		
 		for (int v = 0; v < [element.path count]; v++)
 		{
@@ -136,7 +128,12 @@
 			
 			CGPoint point = [value CGPointValue];
 			
-			CGContextAddLineToPoint(context, point.x, point.y);
+			if (v == 0)
+			{
+				CGContextMoveToPoint(context, point.x, point.y);
+			} else {
+				CGContextAddLineToPoint(context, point.x, point.y);
+			}
 		}
 		
 		CGContextStrokePath(context);
