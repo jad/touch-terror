@@ -192,6 +192,9 @@
 	[self setNeedsDisplayInRect:self.frame];
 }
 
+#pragma mark -
+#pragma mark RadialWeaponDelegate implementation
+
 - (void)radialWeaponDidFire:(RadialWeapon *)weapon
 {
     for (int i = 0, count = [people count]; i < count; ++i) {
