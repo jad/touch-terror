@@ -11,6 +11,12 @@
 
 @implementation GameView
 
+- (CGFloat)CGPointDistance:(CGPoint)a to:(CGPoint)b
+{
+	CGFloat distance = sqrtf((b.x - a.x)*(b.x - a.x) + (b.y - a.y)*(b.y - a.y));
+	
+	return distance;
+}
 
 - (id)initWithFrame:(CGRect)frame {
     if ((self = [super initWithFrame:frame])) {
@@ -85,15 +91,19 @@
 	
 	[currentElement addPoint:CGPointMake(point.x, self.frame.size.height)];
 	
+	currentElement.created = YES;
 	[currentElement release];
 }
 
 // Only override drawRect: if you perform custom drawing.
 // An empty implementation adversely affects performance during animation.
 - (void)drawRect:(CGRect)rect {
+	frame += 1;
+	frame %= 30;
+	
 	CGContextRef context = UIGraphicsGetCurrentContext();
 	
-	UIImage *personImage = [UIImage imageNamed:@"snow.png"];
+	UIImage *personImage = [UIImage imageNamed:@"person.png"];
 	CGImageRef image = personImage.CGImage;
 	
 	// Draw people
@@ -115,8 +125,10 @@
 	{
 		FloodElement *element = [elements objectAtIndex:i];
 		
+		if (element.created) element.lifetime -= (1.0f / ((float)FRAMERATE));
+		
 		UIColor *color = [UIColor blueColor];
-		color = [color colorWithAlphaComponent:0.5f];
+		color = [color colorWithAlphaComponent:(element.created? 1.0f : 0.5f)];
 		
 		CGContextSetStrokeColorWithColor(context, color.CGColor);
 		CGContextSetLineWidth(context, 30);
@@ -134,9 +146,24 @@
 			} else {
 				CGContextAddLineToPoint(context, point.x, point.y);
 			}
+			
+			if (frame % 5 == 1)
+			{
+				for (int p = 0; p < [people count]; p++)
+				{
+					Person *person = [people objectAtIndex:p];
+					
+					
+				}
+			}
 		}
 		
 		CGContextStrokePath(context);
+		
+		if (element.lifetime <= 0)
+		{
+			[elements removeObject:element];
+		}
 	}
 }
 

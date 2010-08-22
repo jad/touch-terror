@@ -16,6 +16,8 @@
 
 	NSMutableArray *people;
 	
+	int frame;
+	
 	FloodElement *currentElement;
 	NSMutableArray *elements;
 }

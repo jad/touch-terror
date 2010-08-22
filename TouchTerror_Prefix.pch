@@ -6,6 +6,6 @@
     #import <Foundation/Foundation.h>
     #import <UIKit/UIKit.h>
 
-	#define PERSON_IMAGE_HEIGHT 7
+	#define PERSON_IMAGE_HEIGHT 14
 	#define FRAMERATE 30
 #endif

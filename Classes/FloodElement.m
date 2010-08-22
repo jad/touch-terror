@@ -10,13 +10,14 @@
 
 
 @implementation FloodElement
-@synthesize path;
+@synthesize path, lifetime, created;
 
 - (id)init
 {
 	if (self = [super init])
 	{
 		path = [[NSMutableArray alloc] init];
+		lifetime = 3.0f;
 	}
 	
 	return self;

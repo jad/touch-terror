@@ -11,9 +11,13 @@
 
 @interface FloodElement : Element {
 	NSMutableArray *path;
+	float lifetime;
+	BOOL created;
 }
 
 @property (nonatomic, retain) NSMutableArray *path;
+@property float lifetime;
+@property BOOL created;
 
 - (void)addPoint:(CGPoint)point;
 
