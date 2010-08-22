@@ -39,14 +39,12 @@ static const NSTimeInterval ANIMATION_DURATION = 1.0;
 
     [[self delegate] radialWeaponDidFire:self];
 
-	/*
-	NSString * path = [[NSBundle mainBundle] pathForResource:@"explosion-01" ofType:@"wav"];
+	NSString * path = [[NSBundle mainBundle] pathForResource:@"thunder-03" ofType:@"wav"];
 	NSURL * soundFile = [[NSURL alloc] initFileURLWithPath:path];
 	AVAudioPlayer * player = [[AVAudioPlayer alloc] initWithContentsOfURL:soundFile error:NULL];
 	[soundFile release];
 	[player prepareToPlay];
 	[player play];
-	 */
 }
 
 - (void)removeView:(UIImageView *)view
