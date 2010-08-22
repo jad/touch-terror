@@ -7,6 +7,11 @@
 //
 
 #import "TouchTerrorViewController.h"
+#import "ScoreManager.h"
+
+@interface TouchTerrorViewController ()
+- (void)updateScore:(int)score;
+@end
 
 @implementation TouchTerrorViewController
 
@@ -38,7 +43,11 @@
     [[self navigationItem] setRightBarButtonItem:scoreItem];
     [scoreItem release], scoreItem = nil;
 
-    //[[self navigationItem] setTitle:@"Touch Terror"];
+    ScoreManager * mgr = [ScoreManager defaultManager];
+    [mgr addObserver:self
+          forKeyPath:@"score"
+             options:NSKeyValueObservingOptionNew
+             context:NULL];
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
@@ -56,6 +65,26 @@
 
 - (void)weaponChanged:(UISegmentedControl *)sender
 {
+}
+
+#pragma mark -
+#pragma mark KVO events
+
+- (void)observeValueForKeyPath:(NSString *)keyPath
+                      ofObject:(ScoreManager *)mgr
+                        change:(NSDictionary *)change
+                       context:(void *)context
+{
+    [self updateScore:[mgr score]];
+}
+
+#pragma mark -
+#pragma mark Private implementation
+
+- (void)updateScore:(int)score
+{
+    UIBarButtonItem * scoreItem = [[self navigationItem] rightBarButtonItem];
+    [scoreItem setTitle:[NSString stringWithFormat:@"Score: %d", score]];
 }
 
 @end
