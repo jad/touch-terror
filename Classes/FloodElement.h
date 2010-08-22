@@ -15,4 +15,6 @@
 
 @property (nonatomic, retain) NSMutableArray *path;
 
+- (void)addPoint:(CGPoint)point;
+
 @end
