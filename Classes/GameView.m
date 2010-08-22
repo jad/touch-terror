@@ -26,10 +26,11 @@
     return self;
 }
 
-- (void)addPerson
+- (void)addPersonTop:(BOOL)top
 {
 	Person *person = [[Person alloc] init];
-	person.pos = CGPointMake(arc4random() % ((int)self.frame.size.width), (arc4random() % ((int)self.frame.size.height) - self.frame.size.height));
+	person.pos = CGPointMake(arc4random() % ((int)self.frame.size.width), 
+							 top? -PERSON_IMAGE_HEIGHT : (arc4random() % ((int)self.frame.size.height) - self.frame.size.height));
 	
 	int varience = arc4random() % 1000;
 	float floatvarience = ((float)varience) * 0.01;
@@ -38,6 +39,11 @@
 	person.speed = 15.0f + floatvarience;
 	[people addObject:person];
 	[person release], person = nil;
+}
+
+- (void)addPerson
+{
+	[self addPersonTop:YES];
 }
 
 - (void)awakeFromNib
@@ -49,22 +55,24 @@
 	
 	for (int i = 0; i < 50; i++)
 	{
-		[self addPerson];
+		[self addPersonTop:NO];
 	}
 }
 
 - (void)checkBoundsOfPeople
 {
-	for (Person *person in people)
+	for (int i = 0; i < [people count]; i++)
 	{
+		Person *person = [people objectAtIndex:i];
 		if (person.pos.y > self.frame.size.height + PERSON_IMAGE_HEIGHT)
 		{
 			[people removeObject:person];
+			i--;
 			
 			ScoreManager *scores = [ScoreManager defaultManager];
 			scores.score -= 1;
 			
-			[self addPerson];
+			[self addPersonTop:YES];
 		}
 	}
 }
@@ -109,6 +117,14 @@
 	
 	currentElement.created = YES;
 	[currentElement release];
+}
+
+- (void)killPerson:(Person *)person
+{
+	[people removeObject:person];
+	ScoreManager *scores = [ScoreManager defaultManager];
+	scores.score += KILL_VALUE;
+	[self performSelector:@selector(killPerson:) withObject:nil afterDelay:0.5];
 }
 
 // Only override drawRect: if you perform custom drawing.
@@ -173,9 +189,7 @@
 					
 					if (dist <= 20)
 					{
-						[people removeObject:person];
-						ScoreManager *scores = [ScoreManager defaultManager];
-						scores.score += KILL_VALUE;
+						[self killPerson:person];
 					}
 				}
 			}
@@ -200,10 +214,11 @@
 
 - (void)radialWeaponDidFire:(RadialWeapon *)weapon
 {
-    for (int i = 0, count = [people count]; i < count; ++i) {
+    for (int i = 0; i < [people count]; i++) {
         Person * person = [people objectAtIndex:i];
         if ([weapon isPersonInLineOfFire:person]) {
-            // TODO: KILL PERSON HERE
+            [self killPerson:person];
+			i--;
         }
     }
 }
