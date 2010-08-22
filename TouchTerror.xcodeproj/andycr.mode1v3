@@ -227,8 +227,6 @@
 			<key>Layout</key>
 			<array>
 				<dict>
-					<key>BecomeActive</key>
-					<true/>
 					<key>ContentConfiguration</key>
 					<dict>
 						<key>PBXBottomSmartGroupGIDs</key>
@@ -272,7 +270,7 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>9</integer>
+									<integer>8</integer>
 									<integer>1</integer>
 									<integer>0</integer>
 								</array>
@@ -308,6 +306,8 @@
 					<key>Dock</key>
 					<array>
 						<dict>
+							<key>BecomeActive</key>
+							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
@@ -322,16 +322,24 @@
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
 										<string>GameView.m</string>
+										<key>_historyCapacity</key>
+										<integer>0</integer>
+										<key>bookmark</key>
+										<string>A3EB61001221C0030066EEDE</string>
 										<key>history</key>
 										<array>
 											<string>A3C6FC821221B33600BC164F</string>
 											<string>A3C6FC831221B33600BC164F</string>
-											<string>A3EB607E1221B9970066EEDE</string>
-											<string>A3EB607F1221B9970066EEDE</string>
-											<string>A3EB60801221B9970066EEDE</string>
-											<string>A3EB60811221B9970066EEDE</string>
 											<string>A3EB60821221B9970066EEDE</string>
-											<string>A3EB60841221B9970066EEDE</string>
+											<string>A3EB60A51221BB230066EEDE</string>
+											<string>A3EB60A71221BB230066EEDE</string>
+											<string>A3EB60B51221BBBA0066EEDE</string>
+											<string>A3EB60FA1221C0030066EEDE</string>
+											<string>A3EB60FB1221C0030066EEDE</string>
+											<string>A3EB60FC1221C0030066EEDE</string>
+											<string>A3EB60FD1221C0030066EEDE</string>
+											<string>A3EB60FE1221C0030066EEDE</string>
+											<string>A3EB60FF1221C0030066EEDE</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -529,9 +537,11 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>1C78EAAD065D492600B07095</string>
+		<string>A3EB60B11221BB330066EEDE</string>
+		<string>A3EB60AC1221BB230066EEDE</string>
 		<string>1CD10A99069EF8BA00B06720</string>
 		<string>A3C6FC521221B07100BC164F</string>
+		<string>1C78EAAD065D492600B07095</string>
 		<string>/Users/andycr/Development/touch-terror/TouchTerror.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
@@ -867,6 +877,8 @@
 					<key>Dock</key>
 					<array>
 						<dict>
+							<key>BecomeActive</key>
+							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
@@ -912,7 +924,7 @@
 			<key>WindowToolGUID</key>
 			<string>1C78EAAD065D492600B07095</string>
 			<key>WindowToolIsVisible</key>
-			<false/>
+			<true/>
 		</dict>
 		<dict>
 			<key>Identifier</key>

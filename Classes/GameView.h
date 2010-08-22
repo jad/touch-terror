@@ -14,6 +14,7 @@
 	NSTimer *displayTimer;
 
 	NSMutableArray *people;
+	NSMutableArray *elements;
 }
 
 @end

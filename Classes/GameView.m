@@ -22,7 +22,7 @@
 - (void)addPerson
 {
 	Person *person = [[Person alloc] init];
-	person.pos = CGPointMake(arc4random() % ((int)self.frame.size.width), arc4random() % ((int)self.frame.size.height));
+	person.pos = CGPointMake(arc4random() % ((int)self.frame.size.width), (arc4random() % ((int)self.frame.size.height) - self.frame.size.height));
 	
 	int varience = arc4random() % 1000;
 	float floatvarience = ((float)varience) * 0.01;
@@ -30,15 +30,16 @@
 	
 	person.speed = 15.0f + floatvarience;
 	[people addObject:person];
+	[person release], person = nil;
 }
 
 - (void)awakeFromNib
 {
-	displayTimer = [NSTimer scheduledTimerWithTimeInterval:1.0f/((float)FRAMERATE) target:self selector:@selector(update:) userInfo:nil repeats:YES];
+	displayTimer = [[NSTimer scheduledTimerWithTimeInterval:1.0f/((float)FRAMERATE) target:self selector:@selector(update:) userInfo:nil repeats:YES] retain];
 	
 	if (!people) people = [[NSMutableArray alloc] init];
 	
-	for (int i = 0; i < 20; i++)
+	for (int i = 0; i < 50; i++)
 	{
 		[self addPerson];
 	}
@@ -65,8 +66,11 @@
 	UIImage *personImage = [UIImage imageNamed:@"snow.png"];
 	CGImageRef image = personImage.CGImage;
 	
-	for (Person *person in people)
+	// Draw people
+	for (int i = 0; i < [people count]; i++)
 	{
+		Person *person = [people objectAtIndex:i];
+		
 		CGPoint personPoint = person.pos;
 		personPoint.y += person.speed / FRAMERATE;
 		person.pos = personPoint;
@@ -83,6 +87,8 @@
 }
 
 - (void)dealloc {
+	[displayTimer release];
+	
     [super dealloc];
 }
 

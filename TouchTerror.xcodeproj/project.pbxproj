@@ -19,6 +19,8 @@
 		A3C6FC5B1221B10400BC164F /* GameView.m in Sources */ = {isa = PBXBuildFile; fileRef = A3C6FC5A1221B10400BC164F /* GameView.m */; };
 		A3C6FC631221B16C00BC164F /* snow.png in Resources */ = {isa = PBXBuildFile; fileRef = A3C6FC621221B16C00BC164F /* snow.png */; };
 		A3EB605F1221B6A20066EEDE /* ScoreManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A3EB605E1221B6A20066EEDE /* ScoreManager.m */; };
+		A3EB60F41221BE020066EEDE /* Element.m in Sources */ = {isa = PBXBuildFile; fileRef = A3EB60F31221BE020066EEDE /* Element.m */; };
+		A3EB60F71221BE090066EEDE /* FloodElement.m in Sources */ = {isa = PBXBuildFile; fileRef = A3EB60F61221BE090066EEDE /* FloodElement.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +44,10 @@
 		A3C6FC621221B16C00BC164F /* snow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = snow.png; sourceTree = "<group>"; };
 		A3EB605D1221B6A20066EEDE /* ScoreManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScoreManager.h; sourceTree = "<group>"; };
 		A3EB605E1221B6A20066EEDE /* ScoreManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScoreManager.m; sourceTree = "<group>"; };
+		A3EB60F21221BE020066EEDE /* Element.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Element.h; sourceTree = "<group>"; };
+		A3EB60F31221BE020066EEDE /* Element.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Element.m; sourceTree = "<group>"; };
+		A3EB60F51221BE090066EEDE /* FloodElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FloodElement.h; sourceTree = "<group>"; };
+		A3EB60F61221BE090066EEDE /* FloodElement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FloodElement.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +77,10 @@
 				A3C6FC5A1221B10400BC164F /* GameView.m */,
 				A3EB605D1221B6A20066EEDE /* ScoreManager.h */,
 				A3EB605E1221B6A20066EEDE /* ScoreManager.m */,
+				A3EB60F21221BE020066EEDE /* Element.h */,
+				A3EB60F31221BE020066EEDE /* Element.m */,
+				A3EB60F51221BE090066EEDE /* FloodElement.h */,
+				A3EB60F61221BE090066EEDE /* FloodElement.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -193,6 +203,8 @@
 				A3C6FC581221B0A300BC164F /* Person.m in Sources */,
 				A3C6FC5B1221B10400BC164F /* GameView.m in Sources */,
 				A3EB605F1221B6A20066EEDE /* ScoreManager.m in Sources */,
+				A3EB60F41221BE020066EEDE /* Element.m in Sources */,
+				A3EB60F71221BE090066EEDE /* FloodElement.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
