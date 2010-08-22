@@ -9,9 +9,9 @@
 #import "ScoreManager.h"
 #import "Person.h"
 #import "FloodElement.h"
+#import "RadialWeapon.h"
 
-
-@interface GameView : UIView {
+@interface GameView : UIView <RadialWeaponDelegate> {
 	NSTimer *displayTimer;
 
 	NSMutableArray *people;
@@ -20,8 +20,12 @@
 	
 	CGPoint lastTouch;
 	
+	BOOL floodChosen;
+	
 	FloodElement *currentElement;
 	NSMutableArray *elements;
 }
+
+@property BOOL floodChosen;
 
 @end
