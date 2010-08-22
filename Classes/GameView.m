@@ -124,7 +124,7 @@
 	[people removeObject:person];
 	ScoreManager *scores = [ScoreManager defaultManager];
 	scores.score += KILL_VALUE;
-	[self performSelector:@selector(killPerson:) withObject:nil afterDelay:0.5];
+	//[self performSelector:@selector(addPerson:) withObject:nil afterDelay:1];
 }
 
 // Only override drawRect: if you perform custom drawing.
@@ -132,6 +132,8 @@
 - (void)drawRect:(CGRect)rect {
 	frame += 1;
 	frame %= 30;
+	
+	if (frame == 1 || [people count] < 50) [self addPersonTop:NO];
 	
 	CGContextRef context = UIGraphicsGetCurrentContext();
 	
