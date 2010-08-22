@@ -29,7 +29,14 @@
 	{
 		Person *person = [[Person alloc] init];
 		person.pos = CGPointMake(arc4random() % 768, arc4random() % 1024);
-		person.speed = 30.0f;
+		
+		int varience = arc4random() % 2000;
+		float floatvarience = ((float)varience) * 0.01;
+		floatvarience -= 10.0f;
+		
+		NSLog(@"%f", floatvarience);
+		
+		person.speed = 30.0f + floatvarience;
 		[people addObject:person];
 	}
 }
