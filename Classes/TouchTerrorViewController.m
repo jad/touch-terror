@@ -1,19 +1,18 @@
-//
-//  TouchTerrorViewController.m
-//  TouchTerror
-//
-//  Created by Andy Riordan on 8/22/10.
-//  Copyright __MyCompanyName__ 2010. All rights reserved.
-//
-
 #import "TouchTerrorViewController.h"
 #import "ScoreManager.h"
+#import "RadialWeapon.h"
+#import "LightningRadialWeapon.h"
+#import "FireRadialWeapon.h"
 
 @interface TouchTerrorViewController ()
+@property (nonatomic, retain) RadialWeapon * radialWeapon;
+
 - (void)updateScore:(int)score;
 @end
 
 @implementation TouchTerrorViewController
+
+@synthesize radialWeapon = _radialWeapon;
 
 - (void)dealloc
 {
@@ -65,6 +64,16 @@
 
 - (void)weaponChanged:(UISegmentedControl *)sender
 {
+    NSInteger idx = [sender selectedSegmentIndex];
+    if (idx == 1) {  // fire
+        RadialWeapon * rw = [[FireRadialWeapon alloc] initWithView:[self view]];
+        [self setRadialWeapon:rw];
+        [rw release], rw = nil;
+    } else if (idx == 3) {  // lightning
+        RadialWeapon * rw = [[LightningRadialWeapon alloc] initWithView:[self view]];
+        [self setRadialWeapon:rw];
+        [rw release], rw = nil;
+    }
 }
 
 #pragma mark -

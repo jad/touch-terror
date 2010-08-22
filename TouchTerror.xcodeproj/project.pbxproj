@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		05D3739C1221C39D00C11C62 /* RadialWeapon.m in Sources */ = {isa = PBXBuildFile; fileRef = 05D3739B1221C39D00C11C62 /* RadialWeapon.m */; };
+		05D3739F1221C43C00C11C62 /* LightningRadialWeapon.m in Sources */ = {isa = PBXBuildFile; fileRef = 05D3739E1221C43C00C11C62 /* LightningRadialWeapon.m */; };
+		05D373A21221C62000C11C62 /* FireRadialWeapon.m in Sources */ = {isa = PBXBuildFile; fileRef = 05D373A11221C62000C11C62 /* FireRadialWeapon.m */; };
 		1D3623260D0F684500981E51 /* TouchTerrorAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3623250D0F684500981E51 /* TouchTerrorAppDelegate.m */; };
 		1D60589B0D05DD56006BFB54 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
 		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
@@ -24,6 +27,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		05D3739A1221C39D00C11C62 /* RadialWeapon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RadialWeapon.h; sourceTree = "<group>"; };
+		05D3739B1221C39D00C11C62 /* RadialWeapon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RadialWeapon.m; sourceTree = "<group>"; };
+		05D3739D1221C43C00C11C62 /* LightningRadialWeapon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LightningRadialWeapon.h; sourceTree = "<group>"; };
+		05D3739E1221C43C00C11C62 /* LightningRadialWeapon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LightningRadialWeapon.m; sourceTree = "<group>"; };
+		05D373A01221C62000C11C62 /* FireRadialWeapon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FireRadialWeapon.h; sourceTree = "<group>"; };
+		05D373A11221C62000C11C62 /* FireRadialWeapon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FireRadialWeapon.m; sourceTree = "<group>"; };
 		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		1D3623240D0F684500981E51 /* TouchTerrorAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TouchTerrorAppDelegate.h; sourceTree = "<group>"; };
 		1D3623250D0F684500981E51 /* TouchTerrorAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TouchTerrorAppDelegate.m; sourceTree = "<group>"; };
@@ -81,6 +90,12 @@
 				A3EB60F31221BE020066EEDE /* Element.m */,
 				A3EB60F51221BE090066EEDE /* FloodElement.h */,
 				A3EB60F61221BE090066EEDE /* FloodElement.m */,
+				05D3739A1221C39D00C11C62 /* RadialWeapon.h */,
+				05D3739B1221C39D00C11C62 /* RadialWeapon.m */,
+				05D3739D1221C43C00C11C62 /* LightningRadialWeapon.h */,
+				05D3739E1221C43C00C11C62 /* LightningRadialWeapon.m */,
+				05D373A01221C62000C11C62 /* FireRadialWeapon.h */,
+				05D373A11221C62000C11C62 /* FireRadialWeapon.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -205,6 +220,9 @@
 				A3EB605F1221B6A20066EEDE /* ScoreManager.m in Sources */,
 				A3EB60F41221BE020066EEDE /* Element.m in Sources */,
 				A3EB60F71221BE090066EEDE /* FloodElement.m in Sources */,
+				05D3739C1221C39D00C11C62 /* RadialWeapon.m in Sources */,
+				05D3739F1221C43C00C11C62 /* LightningRadialWeapon.m in Sources */,
+				05D373A21221C62000C11C62 /* FireRadialWeapon.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
