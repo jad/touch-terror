@@ -11,7 +11,7 @@
 
 @implementation ScoreManager
 
-- (ScoreManager)defaultManager
+- (ScoreManager *)defaultManager
 {
 	static ScoreManager *shared;
 	

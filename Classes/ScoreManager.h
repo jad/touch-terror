@@ -15,6 +15,6 @@
 
 @property int score;
 
-- (ScoreManager)defaultManager;
+- (ScoreManager *)defaultManager;
 
 @end
