@@ -18,6 +18,8 @@
 	
 	int frame;
 	
+	CGPoint lastTouch;
+	
 	FloodElement *currentElement;
 	NSMutableArray *elements;
 }

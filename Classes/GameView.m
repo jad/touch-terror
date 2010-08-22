@@ -73,6 +73,8 @@
 	UITouch *touch = [touches anyObject];
 	CGPoint point = [touch locationInView:self];
 	
+	lastTouch = point;
+	
 	[currentElement addPoint:CGPointMake(point.x, 0)];
 }
 
@@ -81,7 +83,11 @@
 	UITouch *touch = [touches anyObject];
 	CGPoint point = [touch locationInView:self];
 	
-	[currentElement addPoint:point];
+	if (lastTouch.y < point.y) 
+	{
+		[currentElement addPoint:point];
+		lastTouch = point;
+	}
 }
 
 - (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
@@ -153,7 +159,14 @@
 				{
 					Person *person = [people objectAtIndex:p];
 					
+					CGFloat dist = [self CGPointDistance:point to:person.pos];
 					
+					if (dist <= 10)
+					{
+						[people removeObject:person];
+						ScoreManager *scores = [ScoreManager defaultManager];
+						scores.score += 5;
+					}
 				}
 			}
 		}
