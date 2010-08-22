@@ -1,5 +1,6 @@
 #import "FireRadialWeapon.h"
 #import "Person.h"
+#import <AVFoundation/AVFoundation.h>
 
 static const NSTimeInterval ANIMATION_DURATION = 1.0;
 
@@ -30,15 +31,12 @@ static const NSTimeInterval ANIMATION_DURATION = 1.0;
 
     [[self delegate] radialWeaponDidFire:self];
 
-	/*
-	NSString * path = [[NSBundle mainBundle] pathForResource:@"noSound" ofType:@"wav"];
-	NSURL *soundFile = [[NSURL alloc] initFileURLWithPath:pathForSilentFile];
-	AVAudioPlayer *sPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:soundFile error:NULL];
+	NSString * path = [[NSBundle mainBundle] pathForResource:@"explosion-01" ofType:@"wav"];
+	NSURL * soundFile = [[NSURL alloc] initFileURLWithPath:path];
+	AVAudioPlayer * player = [[AVAudioPlayer alloc] initWithContentsOfURL:soundFile error:NULL];
 	[soundFile release];
-	[sPlayer prepareToPlay];
-	
-	[sPlayer play];
-	 */
+	[player prepareToPlay];
+	[player play];
 }
 
 - (void)removeView:(UIImageView *)view
