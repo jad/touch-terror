@@ -73,7 +73,8 @@
         RadialWeapon * rw = [[LightningRadialWeapon alloc] initWithView:[self view]];
         [self setRadialWeapon:rw];
         [rw release], rw = nil;
-    }
+    } else
+		[self setRadialWeapon:nil];
 }
 
 #pragma mark -

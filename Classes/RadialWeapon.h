@@ -4,6 +4,8 @@
 {
 }
 
+@property (nonatomic, retain, readonly) UIView * view;
+
 - (id)initWithView:(UIView *)view;
 
 @end
