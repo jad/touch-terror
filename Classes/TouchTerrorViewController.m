@@ -3,6 +3,7 @@
 #import "RadialWeapon.h"
 #import "LightningRadialWeapon.h"
 #import "FireRadialWeapon.h"
+#import "GameView.h"
 
 @interface TouchTerrorViewController ()
 @property (nonatomic, retain) RadialWeapon * radialWeapon;
