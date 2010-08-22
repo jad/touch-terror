@@ -325,7 +325,7 @@
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>A31071831221D59100569C11</string>
+										<string>A31071F51221DC1F00569C11</string>
 										<key>history</key>
 										<array>
 											<string>A3C6FC821221B33600BC164F</string>
@@ -344,10 +344,11 @@
 											<string>A31071741221D42000569C11</string>
 											<string>A31071751221D42000569C11</string>
 											<string>A310717E1221D59100569C11</string>
-											<string>A310717F1221D59100569C11</string>
 											<string>A31071801221D59100569C11</string>
-											<string>A31071811221D59100569C11</string>
-											<string>A31071821221D59100569C11</string>
+											<string>A310718E1221D69700569C11</string>
+											<string>A310718F1221D69700569C11</string>
+											<string>A31071F31221DC1F00569C11</string>
+											<string>A31071F41221DC1F00569C11</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -359,14 +360,14 @@
 							<key>GeometryConfiguration</key>
 							<dict>
 								<key>Frame</key>
-								<string>{{0, 0}, {1629, 965}}</string>
+								<string>{{0, 0}, {1629, 964}}</string>
 								<key>RubberWindowFrame</key>
 								<string>0 93 1920 1085 0 0 1920 1178 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXNavigatorGroup</string>
 							<key>Proportion</key>
-							<string>965pt</string>
+							<string>964pt</string>
 						</dict>
 						<dict>
 							<key>ContentConfiguration</key>
@@ -379,14 +380,14 @@
 							<key>GeometryConfiguration</key>
 							<dict>
 								<key>Frame</key>
-								<string>{{0, 970}, {1629, 74}}</string>
+								<string>{{0, 969}, {1629, 75}}</string>
 								<key>RubberWindowFrame</key>
 								<string>0 93 1920 1085 0 0 1920 1178 </string>
 							</dict>
 							<key>Module</key>
 							<string>XCDetailModule</string>
 							<key>Proportion</key>
-							<string>74pt</string>
+							<string>75pt</string>
 						</dict>
 					</array>
 					<key>Proportion</key>
@@ -405,9 +406,9 @@
 			</array>
 			<key>TableOfContents</key>
 			<array>
-				<string>A31071521221D0D200569C11</string>
+				<string>A31071D91221DB3600569C11</string>
 				<string>1CE0B1FE06471DED0097A5F4</string>
-				<string>A31071531221D0D200569C11</string>
+				<string>A31071DA1221DB3600569C11</string>
 				<string>1CE0B20306471E060097A5F4</string>
 				<string>1CE0B20506471E060097A5F4</string>
 			</array>
@@ -545,9 +546,9 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>A31071841221D59100569C11</string>
-		<string>A310716F1221D35300569C11</string>
-		<string>A310715D1221D0D200569C11</string>
+		<string>A31071F61221DC1F00569C11</string>
+		<string>A31071F71221DC1F00569C11</string>
+		<string>A31071E41221DB3600569C11</string>
 		<string>1C78EAAD065D492600B07095</string>
 		<string>A3C6FC521221B07100BC164F</string>
 		<string>1CD10A99069EF8BA00B06720</string>
@@ -631,7 +632,7 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>A3C6FC521221B07100BC164F</string>
-				<string>A31071541221D0D200569C11</string>
+				<string>A31071DB1221DB3600569C11</string>
 				<string>1CD0528F0623707200166675</string>
 				<string>XCMainBuildResultsModuleGUID</string>
 			</array>
@@ -753,13 +754,13 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>1CD10A99069EF8BA00B06720</string>
-				<string>A31071551221D0D200569C11</string>
+				<string>A31071DC1221DB3600569C11</string>
 				<string>1C162984064C10D400B95A72</string>
-				<string>A31071561221D0D200569C11</string>
-				<string>A31071571221D0D200569C11</string>
-				<string>A31071581221D0D200569C11</string>
-				<string>A31071591221D0D200569C11</string>
-				<string>A310715A1221D0D200569C11</string>
+				<string>A31071DD1221DB3600569C11</string>
+				<string>A31071DE1221DB3600569C11</string>
+				<string>A31071DF1221DB3600569C11</string>
+				<string>A31071E01221DB3600569C11</string>
+				<string>A31071E11221DB3600569C11</string>
 			</array>
 			<key>ToolbarConfiguration</key>
 			<string>xcode.toolbar.config.debugV3</string>
@@ -921,7 +922,7 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>1C78EAAD065D492600B07095</string>
-				<string>A310715B1221D0D200569C11</string>
+				<string>A31071E21221DB3600569C11</string>
 				<string>1C78EAAC065D492600B07095</string>
 			</array>
 			<key>ToolbarConfiguration</key>
