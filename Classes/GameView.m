@@ -36,7 +36,7 @@
 	float floatvarience = ((float)varience) * 0.01;
 	floatvarience -= 5.0f;
 	
-	person.speed = 15.0f + floatvarience;
+	person.speed = 25.0f + floatvarience;
 	[people addObject:person];
 	[person release], person = nil;
 }

@@ -64,8 +64,8 @@
 					PBXFileDataSource_Target_ColumnID,
 				);
 			};
-			PBXPerProjectTemplateStateSaveDate = 304208692;
-			PBXWorkspaceStateSaveDate = 304208692;
+			PBXPerProjectTemplateStateSaveDate = 304208986;
+			PBXWorkspaceStateSaveDate = 304208986;
 		};
 		perUserProjectItems = {
 			A31070FE1221CFC700569C11 = A31070FE1221CFC700569C11 /* PBXBookmark */;
@@ -106,9 +106,9 @@
 			A31071C31221D9FA00569C11 = A31071C31221D9FA00569C11 /* PBXTextBookmark */;
 			A31071C71221DA7E00569C11 = A31071C71221DA7E00569C11 /* PBXTextBookmark */;
 			A31071C91221DA8100569C11 = A31071C91221DA8100569C11 /* PBXTextBookmark */;
-			A31071F31221DC1F00569C11 /* PBXTextBookmark */ = A31071F31221DC1F00569C11 /* PBXTextBookmark */;
-			A31071F41221DC1F00569C11 /* PBXTextBookmark */ = A31071F41221DC1F00569C11 /* PBXTextBookmark */;
-			A31071F51221DC1F00569C11 /* PBXTextBookmark */ = A31071F51221DC1F00569C11 /* PBXTextBookmark */;
+			A31071F31221DC1F00569C11 = A31071F31221DC1F00569C11 /* PBXTextBookmark */;
+			A31071F41221DC1F00569C11 = A31071F41221DC1F00569C11 /* PBXTextBookmark */;
+			A31071F51221DC1F00569C11 = A31071F51221DC1F00569C11 /* PBXTextBookmark */;
 			A37EF71F1221C832003101CE = A37EF71F1221C832003101CE /* PBXTextBookmark */;
 			A37EF7321221C8F6003101CE = A37EF7321221C8F6003101CE /* PBXTextBookmark */;
 			A37EF7391221C928003101CE = A37EF7391221C928003101CE /* PBXTextBookmark */;
@@ -151,9 +151,16 @@
 		vrLen = 360;
 		vrLoc = 0;
 	};
+	A31071461221D0CD00569C11 /* FireRadialWeapon.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1568, 1078}}";
+			sepNavSelRange = "{913, 308}";
+			sepNavVisRange = "{0, 1879}";
+		};
+	};
 	A31071481221D0CD00569C11 /* LightningRadialWeapon.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1568, 910}}";
+			sepNavIntBoundsRect = "{{0, 0}, {1568, 907}}";
 			sepNavSelRange = "{0, 0}";
 			sepNavVisRange = "{0, 144}";
 		};
@@ -694,9 +701,9 @@
 	};
 	A3C6FC5A1221B10400BC164F /* GameView.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1568, 3122}}";
-			sepNavSelRange = "{3186, 0}";
-			sepNavVisRange = "{2818, 1942}";
+			sepNavIntBoundsRect = "{{0, 0}, {1568, 3402}}";
+			sepNavSelRange = "{900, 0}";
+			sepNavVisRange = "{509, 1586}";
 		};
 	};
 	A3C6FC821221B33600BC164F /* PBXTextBookmark */ = {
@@ -728,7 +735,7 @@
 	};
 	A3EB605E1221B6A20066EEDE /* ScoreManager.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1568, 910}}";
+			sepNavIntBoundsRect = "{{0, 0}, {1568, 907}}";
 			sepNavSelRange = "{221, 0}";
 			sepNavVisRange = "{0, 379}";
 		};
