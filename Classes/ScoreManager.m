@@ -10,6 +10,7 @@
 
 
 @implementation ScoreManager
+@synthesize score;
 
 - (ScoreManager *)defaultManager
 {
