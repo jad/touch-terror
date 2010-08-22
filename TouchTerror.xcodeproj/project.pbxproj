@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		0572B5A21221DAA700E0DCDF /* explosion-01.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0572B5A11221DAA700E0DCDF /* explosion-01.wav */; };
 		0572B5B01221DB5A00E0DCDF /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0572B5AF1221DB5A00E0DCDF /* AVFoundation.framework */; };
+		05C7B0831221DF950043F3AA /* weapon-lightning.png in Resources */ = {isa = PBXBuildFile; fileRef = 05C7B0821221DF950043F3AA /* weapon-lightning.png */; };
 		1D3623260D0F684500981E51 /* TouchTerrorAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3623250D0F684500981E51 /* TouchTerrorAppDelegate.m */; };
 		1D60589B0D05DD56006BFB54 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
 		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
@@ -55,6 +56,7 @@
 /* Begin PBXFileReference section */
 		0572B5A11221DAA700E0DCDF /* explosion-01.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "explosion-01.wav"; sourceTree = "<group>"; };
 		0572B5AF1221DB5A00E0DCDF /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		05C7B0821221DF950043F3AA /* weapon-lightning.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "weapon-lightning.png"; path = "images/weapon-lightning.png"; sourceTree = "<group>"; };
 		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		1D3623240D0F684500981E51 /* TouchTerrorAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TouchTerrorAppDelegate.h; sourceTree = "<group>"; };
 		1D3623250D0F684500981E51 /* TouchTerrorAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TouchTerrorAppDelegate.m; sourceTree = "<group>"; };
@@ -185,6 +187,7 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				05C7B0821221DF950043F3AA /* weapon-lightning.png */,
 				0572B5A11221DAA700E0DCDF /* explosion-01.wav */,
 				A31071231221D0BF00569C11 /* explosion00.jpg */,
 				A31071241221D0BF00569C11 /* explosion01.jpg */,
@@ -305,6 +308,7 @@
 				A31071431221D0BF00569C11 /* explosion15.jpg in Resources */,
 				A31071441221D0BF00569C11 /* explosion16.jpg in Resources */,
 				0572B5A21221DAA700E0DCDF /* explosion-01.wav in Resources */,
+				05C7B0831221DF950043F3AA /* weapon-lightning.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
